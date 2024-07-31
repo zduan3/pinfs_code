@@ -1,0 +1,48 @@
+expname = dryice
+basedir = ./log
+
+### data info
+datadir = ./data/dryice1
+dataset_type = nv_data
+half_res = normal
+testskip = 20
+
+### network arch
+net_model = siren
+s_model = siren
+use_viewdirs = False
+
+#perturb = True
+omega = 30.0
+use_first_omega = True
+
+### train params - sampling
+N_samples = 32
+N_importance = 64
+N_rand = 1024
+train_warp = True
+vol_output_W = 64
+chunk = 2048
+fix_seed = 123
+
+### train params - iterations
+lrate_decay = 500
+fading_layers = 50000
+vel_delay = 20000
+#tempo_fading = 1
+
+i_weights = 25000
+N_iter = 200000
+
+### train params - loss weights
+vggW = 0.003 # [0.001 - 0.01]
+ghostW = 0.003 # [0.001 - 0.005 ]
+overlayW = 0.002
+
+### scene params
+bbox_min = 0.0
+bbox_max = 1.0
+
+# vol_output_only
+# render_only
+# render_test

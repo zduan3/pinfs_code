@@ -1,0 +1,40 @@
+expname = sphere
+basedir = ./log
+
+### data info
+datadir = ./data/pinf/Sphere
+dataset_type = pinf_data
+half_res = normal
+testskip = 20
+
+### network arch
+net_model = siren
+s_model = siren
+use_viewdirs = False
+
+### train params - sampling
+N_samples = 32
+N_importance = 64
+N_rand = 1024
+train_warp = True
+vol_output_W = 256
+
+### train params - iterations
+precrop_iters = 500
+precrop_frac = 0.5
+lrate_decay = 500
+fading_layers = 50000
+vel_delay = 20000
+
+### train params - loss weights
+vggW = 0.003 # [0.001 - 0.01]
+ghostW = 0.003 # [0.001 - 0.005 ]
+overlayW = 0.002
+
+### scene params
+bbox_min = 0.0
+bbox_max = 1.0
+
+# vol_output_only
+# render_only
+# render_test

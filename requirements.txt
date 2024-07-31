@@ -1,0 +1,9 @@
+torch>=2.0
+numpy
+imageio
+imageio-ffmpeg
+configargparse
+tensorboard>=2.0
+tqdm
+opencv-python>=4.4.0.40
+tensorboardX

@@ -1,0 +1,49 @@
+expname = dryice_neus
+basedir = ./log
+
+### data info
+datadir = ./data/dryice1
+dataset_type = nv_data
+half_res = normal
+testskip = 20
+
+### network arch
+net_model = siren
+s_model = neus
+multires = 6
+use_viewdirs = False
+omega = 20.0
+use_first_omega = True
+#vel_no_slip = True
+
+### train params - sampling
+N_samples = 40
+N_importance = 80
+N_rand = 1024
+train_warp = True
+vgg_strides = 6
+vol_output_W = 64
+chunk = 2048
+
+### train params - iterations
+precrop_iters = 500
+precrop_frac = 0.5
+lrate_decay = 500
+fading_layers = 50000
+tempo_fading = 2000
+vel_delay = 20000
+
+### train params - loss weights
+vggW = 0.003 # [0.001 - 0.01]
+ghostW = 0.003 # [0.001 - 0.005 ]
+ghost_scale = 9.0
+overlayW = 0.002
+devW = 0.01
+
+### scene params
+bbox_min = 0.0
+bbox_max = 1.0
+
+# vol_output_only
+# render_only
+# render_test

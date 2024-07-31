@@ -1,0 +1,46 @@
+expname = cyl
+basedir = ./log
+
+### data info
+datadir = ./data/pinf/Cyl
+dataset_type = pinf_data
+half_res = normal
+testskip = 20
+fix_seed = 142857
+
+### network arch
+net_model = siren
+s_model = neus
+use_viewdirs = False
+#use_color_t = True
+neumann = 1.0
+
+### train params - sampling
+N_samples = 24
+N_importance = 48
+N_rand = 1024
+train_warp = True
+vol_output_W = 128
+chunk = 2048
+
+### train params - iterations
+precrop_iters = 500
+precrop_frac = 0.5
+lrate_decay = 500
+fading_layers = 50000
+tempo_fading = 4000
+vel_delay = 20000
+
+### train params - loss weights
+vggW = 0.003 # [0.001 - 0.01]
+ghostW = 0.003 # [0.001 - 0.005 ]
+ghost_scale = 4.0
+overlayW = 0.003
+
+### scene params
+bbox_min = 0.0
+bbox_max = 1.0
+
+# vol_output_only
+# render_only
+# render_test

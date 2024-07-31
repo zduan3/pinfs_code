@@ -1,0 +1,21 @@
+expname = sphere
+basedir = ./log/static
+datadir = ./data/pinf/Sphere
+dataset_type = pinf_data
+
+use_viewdirs = True
+multires = 10
+multires_views = 4
+white_bkgd = True
+lrate_decay = 500
+
+n_samples = 16
+n_importance = 32
+n_rand = 1024
+chunk = 1024
+fix_seed = 14285736
+
+precrop_iters = 500
+precrop_frac = 0.5
+
+half_res = True
