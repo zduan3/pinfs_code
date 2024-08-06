@@ -1,6 +1,8 @@
 **/.ipynb_checkpoints
 **/__pycache__
 .idea/
+.vscode/
+.devcontainer/
 
 *.png
 *.zip
